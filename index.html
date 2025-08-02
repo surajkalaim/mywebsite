@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Arogya Mission Trust - Healthcare for All</title>
+    <meta name="description" content="Jan Arogya Mission Trust - Dedicated to providing quality healthcare and wellness services to our community through accessible, affordable, and comprehensive care." />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" >
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --trust-blue: #2563eb;
+            --trust-green: #16a34a;
+            --trust-light-blue: #eff6ff;
+            --trust-light-green: #f0fdf4;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .trust-blue { color: var(--trust-blue); }
+        .trust-green { color: var(--trust-green); }
+        .bg-trust-blue { background-color: var(--trust-blue); }
+        .bg-trust-green { background-color: var(--trust-green); }
+        .bg-trust-light-blue { background-color: var(--trust-light-blue); }
+        .bg-trust-light-green { background-color: var(--trust-light-green); }
+        
+        .hero-section {
+            background: linear-gradient(rgba(37, 99, 235, 0.8), rgba(22, 163, 74, 0.8)),
+                        url('img/bg.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            margin: 0 auto 3rem auto;
+        }
+        
+        .trustee-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--trust-blue), var(--trust-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem auto;
+        }
+        
+        .mission-card, .trustee-card, .contact-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-card:hover, .trustee-card:hover, .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mission-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-trust {
+            background: var(--trust-blue);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-trust:hover {
+            background: #1d4ed8;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--trust-blue), var(--trust-green));
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold trust-blue" href="#">
+                <i class="fas fa-heart me-2"></i>
+                Jan Arogya Mission Trust
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mission">Mission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trustees">Trustees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">
+                        Healthcare for <span class="text-warning">Everyone</span>
+                    </h1>
+                    <p class="lead mb-4 fw-bold">
+                    Jan Arogya Mission Trust is dedicated for social cause and established for
+providing quality health care and wellness services to economically backward by
+providing medical support/financial assistance for medical
+treatment/surgery/nursing and relief to the, poorest, needy &amp; deserving, aged,
+infirm, orphans and widows among others.
+
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#mission" class="btn btn-light btn-lg">Learn More</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-5 bg-trust-light-blue">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-4">Our Mission</h2>
+                <div class="section-divider bg-trust-blue"></div>
+                <p class="lead text-muted mx-auto" style="max-width: 800px;">
+               Jan Arogya Mission Trust is committed to improving healthcare accessibility and promoting
+wellness in underserved communities through financial support, comprehensive healthcare
+services, education, preventive care programs, spreading awareness programmes for society as
+well as medical fraternity.
+
+                </p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mission-card h-100 text-center p-4">
+                        <div class="mission-icon bg-trust-blue">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Healthcare Access to underserved</h5>
+                        <p class="text-muted">
+                            Providing quality healthcare services by way of financial support to under privileged sections of
+society
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mission-card h-100 text-center p-4">
+                        <div class="mission-icon bg-trust-green">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Preventive Care/ Health Awareness</h5>
+                        <p class="text-muted">
+                            Focus on disease prevention and health education and awareness programs
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mission-card h-100 text-center p-4">
+                        <div class="mission-icon bg-trust-blue">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Quality Assurance</h5>
+                        <p class="text-muted">
+                            Maintaining transparency and highest standards in all our healthcare initiatives/support initiatives	
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mission-card h-100 text-center p-4">
+                        <div class="mission-icon bg-trust-green">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Community Inreach</h5>
+                        <p class="text-muted">
+                            We welcome any financial support/donations from individuals/public at large /companies/
+organisations for ultimately assisting the poor and needy citizens
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-5">
+                <h3 class="fw-bold mb-4 text-center">Objective</h3>
+                <p class="lead text-muted justify-content">
+                   This trust is created for charitable purposes to carry on charitable,
+medical, social works, religious or educational activities with in India. The object
+of the trust shall include providing medical support/financial assistance for
+medical treatment/surgery/nursing and relief to the economically backward,
+poorest, needy &amp; deserving, aged, infirm, orphans and widows among others;
+education; empowerment; gender equality; economic security; and the advance
+of any other objects of general public utility. It shall be lawful and competent for
+trustees to give donations to other charitable trusts and institutions, and the
+trust shall be for the benefit of all persons belonging to whatever community
+irrespective of gender, age, caste, creed ethnicity or religion. The objects of the
+trust will not include objects involving the carrying on of activity for profit
+prohibited within the meaning of the Income Tax Act, 1961 to attain the aims &amp;
+objectives. <br><br>
+
+The prime objective is to provide financial aid/assistance/support for Medical
+treatment/surgery/services/nursing &amp; medicines to the needy, economically
+backward &amp; poorest of the poor people. To establish, maintain, develop, equip and
+grant, aids, contributions to charitable Dispensaries, Dawakhanas in connection
+with Allopathy, Homeopathy, Ayurvedic, Naturopathy, etc. or any other institutions
+of like nature.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trustees Section -->
+    <section id="trustees" class="py-5 bg-trust-light-green">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-4">Board of Trustees</h2>
+                <div class="section-divider bg-trust-green"></div>
+                <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                    Our distinguished board of trustees brings together decades of experience in healthcare, 
+                    social work, and organizational management to guide our mission.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card trustee-card h-100 p-4">
+                        <div class="trustee-avatar"><img src="img/ashok1.jpg" alt="Ashok Kumar Jain" class="rounded-circle w-100"></div>
+                        <div class="text-center mb-3">
+                            <h5 class="fw-bold">Ashok Kumar Jain</h5>
+                            <span class="badge bg-trust-blue mb-2">Chairman &amp; Managing Trustee</span>
+                            
+                        </div>
+                     <div class="border-top pt-3">
+                                                        <p class="text-muted small">He is
+M. Sc. in agriculture, CAIIB, DMS(H).
+He is former General Manager &amp; adviser of public sector Bank (PSB). Worked as
+Senior VP in an ARC ASREC India Ltd. Mumbai He has more than 35 years of
+Industry experience in Banking and have worked in Rural to International banking
+branches and controlling offices in the areas of <span id="dots">...</span><span id="more" style="display:none">General Banking Operations Credit
+Forex Credit Monitoring and Restructuring Resolution and recovery in Union Bank of
+India. He has also successfully completed one year residential Management
+Education Programme started by Union Bank in tie up with IIM Bangalore. The
+course design was on the pattern of MBA executive programme run by top Business
+schools in the country.
+
+Registered as Insolvency Professional with Insolvency and Bankruptcy Board of
+India IBBI after passing IBBI Limited Insolvency Examination.</span><button onclick="myFunction()" id="myBtn">Read more</button> 
+</p>
+                     
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card trustee-card h-100 p-4">
+                        <div class="trustee-avatar"><img src="img/avi1.jpg" alt="Dr Avinash Jain" class="rounded-circle w-100"></div>
+                        <div class="text-center mb-3">
+                            <h5 class="fw-bold">Dr Avinash Jain</h5>
+                            <span class="badge bg-trust-blue mb-2">Vice Chairman</span>
+                            
+                        </div>
+             <div class="border-top pt-3">
+                                                        <p class="text-muted small">
+                     
+					 
+					 He is renowned Rheumatologist and auto
+immune disease specialist and serving a leading govt hospital SMS Medical college
+and hospital of Rajasthan.  He is MD(Medicine) DM Clinical Immunology &amp;
+Rheumatology, Sanjay Gandhi Post Graduate Institute Lucknow, a pioneer world
+class level medical institute.<span id="dots1">...</span><span id="more1" style="display:none"> IRF(UoB, UK) – Fellowship(Qualitative research &amp;
+Behavioral medicine),E C Member (2021-23), Assistant Editor (IJR 2023-25), RRA
+EC (2021-25) </span><button onclick="myFunction1()" id="myBtn1">Read more</button> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card trustee-card h-100 p-4">
+                        <div class="trustee-avatar"><img src="img/raj1.jpg" alt="Rajendra Kumar Jain" class="rounded-circle w-100"></div>
+                        <div class="text-center mb-3">
+                            <h5 class="fw-bold">Rajendra Kumar Jain</h5>
+                            <span class="badge bg-trust-blue mb-2">Treasurer</span>
+                            
+                        </div>
+                          <div class="border-top pt-3">
+                                                        <p class="text-muted small">
+                     He is retired asst accounts officer Govt of
+Rajasthan. Currently engaged in social service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card trustee-card h-100 p-4">
+                        <div class="trustee-avatar"><img src="img/sapna.png" alt="Dr Sapana Bothra Jain" class="rounded-circle w-100"></div>
+                        <div class="text-center mb-3">
+                            <h5 class="fw-bold">Dr Sapana Bothra Jain</h5>
+                            <span class="badge bg-trust-blue mb-2">Trustee</span>
+                            
+                        </div>
+                              <div class="border-top pt-3">
+                                                        <p class="text-muted small">
+                          She is Endocrine and Breast surgeon.M.Ch. from
+Sanjay Gandhi Post Graduate Institute Lucknow, a pioneer world class level medical
+institute. She is serving Mahatma Gandhi Hospital and visiting surgeon in Eternal
+heart care centre (EHCC)Jaipur, Jivan Rekha hospital Malviya Nagar Jaipur. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card trustee-card h-100 p-4">
+                        <div class="trustee-avatar"><img src="img/kalpana.jpg" alt="Kalpana Jain" class="rounded-circle w-100"></div>
+                        <div class="text-center mb-3">
+                            <h5 class="fw-bold">Kalpana Jain</h5>
+                            <span class="badge bg-trust-blue mb-2">Trustee</span>
+                            
+                        </div>
+                           <div class="border-top pt-3">
+                                                        <p class="text-muted small">
+                      She is a house wife. She is B.A. and passed diploma in food
+and nutrition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card trustee-card h-100 p-4">
+                        <div class="trustee-avatar"><img src="img/jyoti.jpg" alt="Jyoti Kumar Jain" class="rounded-circle w-100"></div>
+                        <div class="text-center mb-3">
+                            <h5 class="fw-bold">Jyoti Kumar Jain</h5>
+                            <span class="badge bg-trust-blue mb-2">Trustee</span>
+                            
+                        </div>
+                           <div class="border-top pt-3">
+                                                        <p class="text-muted small">
+                          He is a qualified CA and leading practicing chartered
+accountant based at Guwahati.</p>
+                        </div>
+                    </div>
+                </div>
+				
+				
+				 <div class="col-lg-3 col-md-6">
+                    <div class="card trustee-card h-100 p-4">
+                        <div class="trustee-avatar">SA</div>
+                        <div class="text-center mb-3">
+                            <h5 class="fw-bold">Subhash Chandra Arora</h5>
+                            <span class="badge bg-trust-blue mb-2">Trustee</span>
+                            
+                        </div>
+                           <div class="border-top pt-3">
+                                                        <p class="text-muted small">
+                          He is retired Chief Manager from Union Bank
+of India having rich banking experience of 40 years.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-4">Contact Us</h2>
+                <div class="section-divider bg-trust-green"></div>
+                <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                    Get in touch with us for healthcare services, financial support, or any
+inquiries. We&#39;re here to serve our underprivileged community and make
+
+healthcare accessible to all in need.
+                </p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="card contact-card p-4 h-100">
+                        <h3 class="fw-bold mb-4">Get In Touch</h3>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon bg-trust-blue me-3">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-semibold mb-1">Registered Office</h6>
+                                <p class="text-muted mb-0">
+                                   Jan Arogya Mission Trust <br>
+116/218 VIMAL GANGA, Shipra Path<br>
+Mansarovar, Jaipur-302020
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon bg-trust-green me-3">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Phone Numbers</h6>
+                                <p class="text-muted mb-0">
+                                 Main Office:  <a href='tel:08058585699'>+91 8058585699</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon bg-trust-blue me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Email Addresses</h6>
+                                <p class="text-muted mb-0">
+                                  <a href='mailto:janarogya108@rediffmail.com'> janarogya108@rediffmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon bg-trust-green me-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Office Hours</h6>
+                                <p class="text-muted mb-0">
+                                   Monday to Friday: 9:00 AM - 6:00 PM <br>
+Saturday: 9:00 AM - 2:00 PM<br>
+Sunday: Emergency services only
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon bg-trust-blue me-3">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Online Presence</h6>
+                                <p class="text-muted mb-0">
+                               Website:  <a href='https://www.janarogyamission.org'>www.janarogyamission.org</a><br>
+Registration: Trust Registration No. 13/Jaipur/2022 <br>
+PAN: AAETJ0385R
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card contact-card p-4 h-100">
+                        <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                        
+                        <form>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="What is this regarding?">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Please describe your inquiry or how we can help you..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-trust w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-heart me-2 fs-3"></i>
+                        <h5 class="fw-bold mb-0">Jan Arogya Mission Trust</h5>
+                    </div>
+                    <p class="mb-3">
+                        To create a healthier society where quality healthcare is accessible to all, specially the
+economically poor or socially downtrodden and underprivileged section of society, through
+innovative healthcare solutions, and financially supporting the needy.
+                    </p>
+                
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="fw-semibold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#mission" class="text-white-50 text-decoration-none">Our Mission</a></li>
+                        <li><a href="#trustees" class="text-white-50 text-decoration-none">Board of Trustees</a></li>
+                        <li><a href="#contact" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="fw-semibold mb-3"><i class="fa-solid fa-indian-rupee-sign me-2 mt-1"></i>Bank Details </h6>
+                    <div class="">
+                        
+						
+						
+                        
+                          Jan Arogya Mission Trust <br>
+Union Bank of India<br>
+Mansarovar branch Jaipur<br>
+SB Account no: 749002010003591<br>
+IFSC code: UBIN0574902<br>
+VPA: <a href="upi://pay?pa=62113901@ubin&cu=INR" class="text-warning">62113901@ubin</a>
+                        
+                    </div>
+                  
+                </div>
+            </div>
+
+            <div class="border-top border-white border-opacity-25 pt-4 text-center">
+                <p class="small opacity-75 mb-0">
+                    © 2025 Jan Arogya Mission Trust. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth scrolling for navigation links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update navbar on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+		
+		function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+	function myFunction1() {
+  var dots = document.getElementById("dots1");
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+    </script>
+</body>
+</html>
